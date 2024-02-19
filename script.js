@@ -16,3 +16,8 @@ function volumeIconChange(){
         volIconBox.innerHTML=icon1;
     }
 }
+
+const equalizerIcon = document.getElementById('equalizerIcon');
+equalizerIcon.addEventListener('click', () => {
+    console.log('Equalizer!!!');
+});
