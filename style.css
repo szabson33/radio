@@ -1,0 +1,25 @@
+#stacje{
+    margin-top: 15vh;
+    height: 10vh;
+    margin-left: 20vw;
+    margin-right: 20vw;
+    text-align: center;
+    /* background-color: grey; */
+}
+
+.header{
+    text-align: center;
+}
+
+.volumeControl {
+    height: 10vh;
+    margin-left: 40vw;
+    margin-right: 40vw;
+}
+
+.przyciski {
+    height: 10vh;
+    margin-left: 40vw;
+    margin-right: 40vw;
+    /* background-color: grey; */
+}
