@@ -9,7 +9,8 @@
     <script src="script.js" defer></script>
 </head>
 <body>
-<h1 class="header">Wybierz Stacje</h1>
+<form>
+<h1 class="header">Wybierz Stację</h1>
 <div id="stacje">
 <button type="button" class="btn btn-outline-primary">Stacja1</button>
 <button type="button" class="btn btn-outline-primary">Stacja2</button>
@@ -28,5 +29,6 @@
 </span>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</form>
 </body>
 </html>

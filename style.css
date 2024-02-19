@@ -12,14 +12,17 @@
 }
 
 .volumeControl {
+    margin-top: 3vh;
     height: 10vh;
-    margin-left: 40vw;
-    margin-right: 40vw;
+    margin-left: 38vw;
+    margin-right: 38vw;
 }
 
 .przyciski {
+    margin-top: 3vh;
+
     height: 10vh;
-    margin-left: 40vw;
-    margin-right: 40vw;
+    margin-left: 38vw;
+    margin-right: 38vw;
     /* background-color: grey; */
 }
