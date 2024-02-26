@@ -1,5 +1,5 @@
 #stacje{
-    margin-top: 15vh;
+    margin-top: 10vh;
     height: 10vh;
     margin-left: 20vw;
     margin-right: 20vw;
@@ -7,8 +7,13 @@
     /* background-color: grey; */
 }
 
-.header{
+.header, .tytul{
     text-align: center;
+}
+
+.tytul {
+    margin-top: 10vh;
+    font-size: 15px;
 }
 
 .volumeControl {

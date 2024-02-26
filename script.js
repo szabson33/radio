@@ -17,7 +17,3 @@ function volumeIconChange(){
     }
 }
 
-const equalizerIcon = document.getElementById('equalizerIcon');
-equalizerIcon.addEventListener('click', () => {
-    console.log('Equalizer!!!');
-});
