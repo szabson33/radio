@@ -16,6 +16,11 @@
     font-size: 15px;
 }
 
+.nazwaStacji {
+    margin-top: 10vh;
+    font-size: 15px;
+}
+
 .volumeControl {
     margin-top: 3vh;
     height: 10vh;
@@ -25,12 +30,13 @@
 #volIconBox{
     /* background-color: greenyellow; */
     width: 5vw;
+    text-align: center;
 }
 
 #pauseStop{
     /* background-color: indianred; */
     width: 5vw;
-
+    text-align: center;
 }
 
 .przyciski {
@@ -38,5 +44,10 @@
     height: 10vh;
     margin-left: 38vw;
     margin-right: 38vw;
-    background-color: grey;
+    /* background-color: grey; */
+    text-align: center;
+}
+
+#volumeValueBox{
+    margin-left: 5vw;
 }

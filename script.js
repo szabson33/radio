@@ -1,5 +1,6 @@
 let volumeIconStatus=1;
 let pauseStopIcon=1;
+const volumeValueBox = document.getElementById('volumeValueBox');
 const volIconBox = document.getElementById('volIconBox');
 const volumeIconChangeClickEvent=volIconBox.addEventListener("click",()=>{
     let icon1 = '<img src="volumeup.svg" style="width:5vw;"></img>';
@@ -32,3 +33,16 @@ const pauseStop = pauseStopHook.addEventListener("click",()=>
         pauseStopHook.innerHTML=icon4;
     }
 });
+
+// Get the volume slider
+const volumeSlider = document.getElementById('volumeSlider');
+
+// Function to handle volume change
+function handleVolumeChange() {
+  // Retrieve the current value
+  const currentVolume = volumeSlider.value;
+  volumeValueBox.innerHTML=currentVolume;
+}
+
+// Attach the event listener to the volume slider
+volumeSlider.addEventListener('input', handleVolumeChange);
