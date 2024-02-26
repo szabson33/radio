@@ -1,1 +1,1 @@
-dasdasasd
+800x480 rozdzialka
