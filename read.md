@@ -1,1 +1,0 @@
-800x480 rozzielczosc wyswietlacza
