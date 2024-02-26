@@ -11,7 +11,7 @@
 <body>
 <form>
 <h1 class="header">Wybierz Stację</h1>
-<h4 class="tytul">Tytul wykonawca</h4>
+<h4 class="tytul">Tytul wykonawca</h4   >
 <div id="stacje">
 <button type="button" class="btn btn-outline-primary">Stacja1</button>
 <button type="button" class="btn btn-outline-primary">Stacja2</button>
@@ -26,7 +26,10 @@
 
 <div class="przyciski">
 <span id="volIconBox">
-<img src="volumeup.svg" alt="" style="width:5vw;" onclick="volumeIconChange()">
+<img src="volumeup.svg" alt="volumeOffOn" style="width:5vw;">
+</span>
+<span id="pauseStop">
+<img src="pause.svg" alt="pause/stop" style="width:5vw">
 </span>
 </div>
 
