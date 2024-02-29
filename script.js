@@ -40,15 +40,16 @@ function handleVolumeChange() {
   return currentVolume;
 }
 
-async function volumeSet() {
-  const plik = "./php_commands/setvolume.php?volume=" + currentVolume;
-  const response = await fetch(plik);
-  const movies = await response.json();
-  console.log(movies);
-}
 
 // Attach the event listener to the volume slider
 volumeSlider.addEventListener("input", () => {
-  let vol = handleVolumeChange();
-  console.log();
+  let currentVolume = handleVolumeChange();
+  volumeSet(currentVolume);
 });
+
+async function volumeSet(currentVolume) 
+{
+  let x = await fetch("http://localhost/radio/php_commands/setvolume.php?volume="+currentVolume);
+  let y = await x.text();
+  console.log("volume set for:"+y);
+}
