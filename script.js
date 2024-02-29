@@ -1,3 +1,4 @@
+let backVal=0;
 let volumeIconStatus = 1;
 let pauseStopIcon = 1;
 const volumeValueBox = document.getElementById("volumeValueBox");
@@ -7,9 +8,17 @@ const volumeIconChangeClickEvent = volIconBox.addEventListener("click", () => {
   let icon2 = '<img src="volumedown.svg" style="width:5vw;"></img>';
   if (volumeIconStatus == 1) {
     //zmien na ikone wylaczona
+    backVal=handleVolumeChange();
+    volumeValueBox.innerHTML = 0 +"%";
+    volumeSet(0);
     volumeIconStatus = 0;
     volIconBox.innerHTML = icon2;
   } else {
+    if(backVal!=0){
+        volumeSet(backVal);
+        volumeValueBox.innerHTML = Math.round(backVal/207*100)+"%";
+        backVal=0;
+    }
     //zmien na ikone wlaczona
     volumeIconStatus = 1;
     volIconBox.innerHTML = icon1;
@@ -36,7 +45,7 @@ const volumeSlider = document.getElementById("volumeSlider");
 function handleVolumeChange() {
   // Retrieve the current value
   const currentVolume = volumeSlider.value;
-  volumeValueBox.innerHTML = currentVolume;
+  volumeValueBox.innerHTML = Math.round(currentVolume/207*100)+"%";
   return currentVolume;
 }
 
