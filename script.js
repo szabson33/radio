@@ -1,6 +1,7 @@
 let backVal = 0;
 let volumeIconStatus = 1;
 let pauseStopIcon = 1;
+let lastStation=null;
 const volumeValueBox = document.getElementById("volumeValueBox");
 const volIconBox = document.getElementById("volIconBox");
 const volumeIconChangeClickEvent = volIconBox.addEventListener("click", () => {
@@ -31,10 +32,12 @@ const pauseStop = pauseStopHook.addEventListener("click", () => {
   let icon4 = '<img src="playarrow.svg" alt="pause/stop" style="width:5vw">';
   if (pauseStopIcon == 1) {
     pauseStopIcon = 0;
-    pauseStopHook.innerHTML = icon3;
+    pauseStopHook.innerHTML = icon4;
+    pStop();
   } else {
     pauseStopIcon = 1;
-    pauseStopHook.innerHTML = icon4;
+    pauseStopHook.innerHTML = icon3;
+    pPlay(lastStation);
   }
 });
 
@@ -76,24 +79,8 @@ async function pStop() {
 
 
 let play = "yes";
-let lastStatnion=null;
-document.getElementById('pauseStop').addEventListener(
-  "click",
-  () => {
-    if (play == "yes") {
-      play="no";
-      pStop();
-    }
-    else
-    {
-      play="yes";
-      if(lastStatnio!=null)
-      pPlay(lastStation);
-    }
-  }
-)
 
 function ustawStacje(number){
   pPlay(number);
-  lastStatnion=number;
+  lastStation=number;
 }
