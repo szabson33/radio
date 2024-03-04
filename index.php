@@ -5,7 +5,63 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+    #stacje {
+        margin-top: 10vh;
+        height: 10vh;
+        margin-left: 20vw;
+        margin-right: 20vw;
+        text-align: center;
+        /* background-color: grey; */
+    }
+
+    .header,
+    .tytul {
+        text-align: center;
+    }
+
+    .tytul {
+        margin-top: 10vh;
+        font-size: 15px;
+    }
+
+    .nazwaStacji {
+        margin-top: 10vh;
+        font-size: 15px;
+    }
+
+    .volumeControl {
+        margin-top: 3vh;
+        height: 10vh;
+        margin-left: 38vw;
+        margin-right: 38vw;
+    }
+
+    #volIconBox {
+        /* background-color: greenyellow; */
+        width: 5vw;
+        text-align: center;
+    }
+
+    #pauseStop {
+        /* background-color: indianred; */
+        width: 5vw;
+        text-align: center;
+    }
+
+    .przyciski {
+        margin-top: 3vh;
+        height: 10vh;
+        margin-left: 38vw;
+        margin-right: 38vw;
+        /* background-color: grey; */
+        text-align: center;
+    }
+
+    #volumeValueBox {
+        margin-left: 5vw;
+    }
+    </style>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <script src="script.js" defer></script>

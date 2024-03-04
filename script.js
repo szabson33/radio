@@ -1,4 +1,4 @@
-let backVal=0;
+let backVal = 0;
 let volumeIconStatus = 1;
 let pauseStopIcon = 1;
 const volumeValueBox = document.getElementById("volumeValueBox");
@@ -8,16 +8,16 @@ const volumeIconChangeClickEvent = volIconBox.addEventListener("click", () => {
   let icon2 = '<img src="volumedown.svg" style="width:5vw;"></img>';
   if (volumeIconStatus == 1) {
     //zmien na ikone wylaczona
-    backVal=handleVolumeChange();
-    volumeValueBox.innerHTML = 0 +"%";
+    backVal = handleVolumeChange();
+    volumeValueBox.innerHTML = 0 + "%";
     volumeSet(0);
     volumeIconStatus = 0;
     volIconBox.innerHTML = icon2;
   } else {
-    if(backVal!=0){
-        volumeSet(backVal);
-        volumeValueBox.innerHTML = Math.round(backVal/207*100)+"%";
-        backVal=0;
+    if (backVal != 0) {
+      volumeSet(backVal);
+      volumeValueBox.innerHTML = Math.round(backVal / 207 * 100) + "%";
+      backVal = 0;
     }
     //zmien na ikone wlaczona
     volumeIconStatus = 1;
@@ -45,7 +45,7 @@ const volumeSlider = document.getElementById("volumeSlider");
 function handleVolumeChange() {
   // Retrieve the current value
   const currentVolume = volumeSlider.value;
-  volumeValueBox.innerHTML = Math.round(currentVolume/207*100)+"%";
+  volumeValueBox.innerHTML = Math.round(currentVolume / 207 * 100) + "%";
   return currentVolume;
 }
 
@@ -56,9 +56,40 @@ volumeSlider.addEventListener("input", () => {
   volumeSet(currentVolume);
 });
 
-async function volumeSet(currentVolume) 
-{
-  let x = await fetch("http://localhost/radio/php_commands/setvolume.php?volume="+currentVolume);
+async function volumeSet(currentVolume) {
+  let x = await fetch("http://localhost/radio/php_commands/setvolume.php?volume=" + currentVolume);
   let y = await x.text();
-  console.log("volume set for:"+y);
 }
+
+async function pPlay() {
+  let x = await fetch("http://localhost/radio/php_commands/play.php");
+  let y = await x.text();
+  console.log(y);
+}
+
+async function pStop() {
+  let x = await fetch("http://localhost/radio/php_commands/stop.php");
+  let y = await x.text();
+  console.log(y);
+}
+
+let play = "yes";
+
+document.getElementById('pauseStop').addEventListener(
+  "click",
+  () => {
+    if (play == "yes") {
+      play="no";
+      pStop();
+    }
+    else
+    {
+      play="yes";
+      pPlay();
+    }
+  }
+)
+
+// async function setStation(number) {
+
+// }
