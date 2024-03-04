@@ -1,6 +1,11 @@
 <?php
+$number = $_GET['v'];
+$comand ='mpc play '. $number ;
+$output=null;
+$retvalue=null;
+exec($comand,$output,$retvalue);
 
 
-echo "play!";
+echo "station set to ".$number;
 
 ?>

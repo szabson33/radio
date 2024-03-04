@@ -73,10 +73,10 @@
         <h4 class="tytul">Tytul wykonawca</h4>
         <h4 class="nazwaStacji">Nazwa Stacji</h4>
         <div id="stacje">
-            <button type="button" class="btn btn-outline-primary">Stacja1</button>
-            <button type="button" class="btn btn-outline-primary">Stacja2</button>
-            <button type="button" class="btn btn-outline-primary">Stacja3</button>
-            <button type="button" class="btn btn-outline-primary">Stacja4</button>
+            <button type="button" onclick="ustawStacje(1)" class="btn btn-outline-primary">Stacja1</button>
+            <button type="button" onclick="ustawStacje(2)"class="btn btn-outline-primary">Stacja2</button>
+            <button type="button" onclick="ustawStacje(3)"class="btn btn-outline-primary">Stacja3</button>
+            <button type="button" onclick="ustawStacje(4)"class="btn btn-outline-primary">Stacja4</button>
         </div>
 
         <div class="volumeControl">

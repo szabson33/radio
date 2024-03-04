@@ -61,8 +61,8 @@ async function volumeSet(currentVolume) {
   let y = await x.text();
 }
 
-async function pPlay() {
-  let x = await fetch("http://localhost/radio/php_commands/play.php");
+async function pPlay(number) {
+  let x = await fetch("http://localhost/radio/php_commands/play.php?v="+number);
   let y = await x.text();
   console.log(y);
 }
@@ -73,8 +73,10 @@ async function pStop() {
   console.log(y);
 }
 
-let play = "yes";
 
+
+let play = "yes";
+let lastStatnion=null;
 document.getElementById('pauseStop').addEventListener(
   "click",
   () => {
@@ -85,11 +87,13 @@ document.getElementById('pauseStop').addEventListener(
     else
     {
       play="yes";
-      pPlay();
+      if(lastStatnio!=null)
+      pPlay(lastStation);
     }
   }
 )
 
-// async function setStation(number) {
-
-// }
+function ustawStacje(number){
+  pPlay(number);
+  lastStatnion=number;
+}
