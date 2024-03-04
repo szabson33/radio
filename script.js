@@ -60,18 +60,18 @@ volumeSlider.addEventListener("input", () => {
 });
 
 async function volumeSet(currentVolume) {
-  let x = await fetch("http://localhost/radio/php_commands/setvolume.php?volume=" + currentVolume);
+  let x = await fetch("http://localhost/radio/php_commands/setvolume.php?volume=" + currentVolume,{mode:'cors',headers:{'Access-Control-Allow-Origin':'*'}});
   let y = await x.text();
 }
 
 async function pPlay(number) {
-  let x = await fetch("http://localhost/radio/php_commands/play.php?v="+number);
+  let x = await fetch("http://localhost/radio/php_commands/play.php?v="+number,{mode:'cors',headers:{'Access-Control-Allow-Origin':'*'}});
   let y = await x.text();
   console.log(y);
 }
 
 async function pStop() {
-  let x = await fetch("http://localhost/radio/php_commands/stop.php");
+  let x = await fetch("http://localhost/radio/php_commands/stop.php",{mode:'cors',headers:{'Access-Control-Allow-Origin':'*'}});
   let y = await x.text();
   console.log(y);
 }
