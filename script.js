@@ -1,7 +1,7 @@
 let backVal = 0;
 let volumeIconStatus = 1;
 let pauseStopIcon = 1;
-let lastStation=null;
+let lastStation = null;
 const volumeValueBox = document.getElementById("volumeValueBox");
 const volIconBox = document.getElementById("volIconBox");
 const volumeIconChangeClickEvent = volIconBox.addEventListener("click", () => {
@@ -60,18 +60,18 @@ volumeSlider.addEventListener("input", () => {
 });
 
 async function volumeSet(currentVolume) {
-  let x = await fetch("http://localhost/radio/php_commands/setvolume.php?volume=" + currentVolume,{mode:'cors',headers:{'Access-Control-Allow-Origin':'*'}});
+  let x = await fetch("http://localhost/radio/php_commands/setvolume.php?volume=" + currentVolume, { mode: 'cors', headers: { 'Access-Control-Allow-Origin': '*' } });
   let y = await x.text();
 }
 
 async function pPlay(number) {
-  let x = await fetch("http://localhost/radio/php_commands/play.php?v="+number,{mode:'cors',headers:{'Access-Control-Allow-Origin':'*'}});
+  let x = await fetch("http://localhost/radio/php_commands/play.php?v=" + number, { mode: 'cors', headers: { 'Access-Control-Allow-Origin': '*' } });
   let y = await x.text();
   console.log(y);
 }
 
 async function pStop() {
-  let x = await fetch("http://localhost/radio/php_commands/stop.php",{mode:'cors',headers:{'Access-Control-Allow-Origin':'*'}});
+  let x = await fetch("http://localhost/radio/php_commands/stop.php", { mode: 'cors', headers: { 'Access-Control-Allow-Origin': '*' } });
   let y = await x.text();
   console.log(y);
 }
@@ -80,7 +80,14 @@ async function pStop() {
 
 let play = "yes";
 
-function ustawStacje(number){
+function ustawStacje(number) {
   pPlay(number);
-  lastStation=number;
+  lastStation = number;
+  test();
+}
+
+async function test() {
+  let x = await fetch("http://localhost/radio/php_commands/current_song.php", { mode: 'cors', headers: { 'Access-Control-Allow-Origin': '*' } });
+  let y = await x.text();
+  console.log(y);
 }
