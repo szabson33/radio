@@ -83,11 +83,4 @@ let play = "yes";
 function ustawStacje(number) {
   pPlay(number);
   lastStation = number;
-  test();
-}
-
-async function test() {
-  let x = await fetch("http://localhost/radio/php_commands/current_song.php", { mode: 'cors', headers: { 'Access-Control-Allow-Origin': '*' } });
-  let y = await x.text();
-  console.log(y);
 }
