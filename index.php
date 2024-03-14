@@ -6,9 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-    body{
-        background-color:white;
+    body {
+        background-color: white;
     }
+
     #stacje {
         margin-top: 10vh;
         height: 10vh;
@@ -77,9 +78,9 @@
         <h4 class="nazwaStacji">Nazwa Stacji</h4>
         <div id="stacje">
             <button type="button" onclick="ustawStacje(1)" class="btn btn-outline-primary">Stacja1</button>
-            <button type="button" onclick="ustawStacje(2)"class="btn btn-outline-primary">Stacja2</button>
-            <button type="button" onclick="ustawStacje(3)"class="btn btn-outline-primary">Stacja3</button>
-            <button type="button" onclick="ustawStacje(4)"class="btn btn-outline-primary">Stacja4</button>
+            <button type="button" onclick="ustawStacje(2)" class="btn btn-outline-primary">Stacja2</button>
+            <button type="button" onclick="ustawStacje(3)" class="btn btn-outline-primary">Stacja3</button>
+            <button type="button" onclick="ustawStacje(4)" class="btn btn-outline-primary">Stacja4</button>
         </div>
 
         <div class="volumeControl">
@@ -94,6 +95,12 @@
             <span id="pauseStop">
                 <img src="pause.svg" alt="pause/stop" style="width:5vw">
             </span>
+        </div>
+        <div>
+            <button id="test">
+                test`
+            </button>
+            <span id="zawartosc"></span>
         </div>
         <span id="test"></span>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"

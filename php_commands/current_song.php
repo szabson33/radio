@@ -26,4 +26,10 @@ switch ($stacja) {
 }
 $opis="Utwór: ".substr($opis,0,60);
 echo $opis;
+
+header('Access-Control-Allow-Origin: *');
+
+header('Access-Control-Allow-Methods: GET, POST');
+
+header("Access-Control-Allow-Headers: X-Requested-With");
 ?>
