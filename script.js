@@ -76,18 +76,24 @@ async function pStop() {
   console.log(y);
 }
 
-document.getElementById("test").addEventListener("click",
-  async () => {
-    let x = await fetch("./php_commands/current_song", { mode: 'cors', headers: { 'Access-Control-Allow-Origin': '*' } });
-    let y = await x.text();
-    document.getElementById("zawartosc").innerHTML = y;
-  }
-
-)
 
 let play = "yes";
 
 function ustawStacje(number) {
   pPlay(number);
   lastStation = number;
+}
+
+function pokaz_utwor() {
+  var xmlhttp = new XMLHttpRequest();
+  xmlhttp.onreadystatechange = function () {
+    //I status jest OK....
+    if (this.readyState == 4 && this.status == 200) {
+      //Wynik wstaw w <span id=wynik>
+      document.getElementById("song").innerHTML = this.responseText;
+    }
+  };
+  //True oznacza async.
+  xmlhttp.open("GET", "./php_commands/current_song.php", true);
+  xmlhttp.send();
 }

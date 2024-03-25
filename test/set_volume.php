@@ -1,6 +1,6 @@
 <?php
-if (isset($_GET['volume']))
-    $volume=$_GET['volume'];
+if (isset($_GET['v']))
+    $volume=$_GET['v'];
 else
     exit(-1);
 $output=null;
