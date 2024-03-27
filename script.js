@@ -85,7 +85,7 @@ function ustawStacje(number) {
 }
 
 function pokaz_utwor() {
-  var xmlhttp = new XMLHttpRequest();
+  const xmlhttp = new XMLHttpRequest();
   xmlhttp.onreadystatechange = function () {
     //I status jest OK....
     if (this.readyState == 4 && this.status == 200) {
@@ -97,3 +97,4 @@ function pokaz_utwor() {
   xmlhttp.open("GET", "./php_commands/current_song.php", true);
   xmlhttp.send();
 }
+

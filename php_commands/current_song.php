@@ -26,4 +26,4 @@ switch ($stacja) {
 }
 $opis="Utwór: ".substr($opis,0,60);
 echo $opis;
-?>
+
